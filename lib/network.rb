@@ -5,4 +5,12 @@ class Network
     @name = name
     @shows = shows
   end
-end 
+
+  def add_show(show)
+    @shows << show
+  end
+
+  def shows
+    @shows 
+  end
+end

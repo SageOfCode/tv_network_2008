@@ -8,12 +8,9 @@ class NetworkTest < Minitest::Test
 
   def test_it_exists_and_has_attributes
     nbc = Network.new("NBC")
-
     assert_instance_of Network, nbc
-
     assert_equal "NBC", nbc.name
     assert_equal [], nbc.shows
-
   end
 
   def test_it_can_add_shows
@@ -24,10 +21,8 @@ class NetworkTest < Minitest::Test
     leslie_knope = Character.new({name: "Leslie Knope", actor: "Amy Poehler", salary: 2_000_000})
     ron_swanson = Character.new({name: "Ron Swanson", actor: "Nick Offerman", salary: 1_400_000})
     parks_and_rec = Show.new("Parks and Recreation", "Michael Shur & Greg Daniels", [leslie_knope, ron_swanson])
-
     nbc.add_show(knight_rider)
     nbc.add_show(parks_and_rec)
-
     assert_equal [knight_rider, parks_and_rec], nbc.shows 
   end
 
