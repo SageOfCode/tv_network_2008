@@ -9,7 +9,6 @@ class ShowTest < Minitest::Test
     kitt = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
     michael_knight = Character.new({name: "Michael Knight", actor: "David Hasselhoff", salary: 1_600_000})
     knight_rider = Show.new("Knight Rider", "Glen Larson", [michael_knight, kitt])
-
     assert_instance_of Show, knight_rider
     assert_equal "Knight Rider", knight_rider.name
     assert_equal "Glen Larson", knight_rider.creator
@@ -20,7 +19,6 @@ class ShowTest < Minitest::Test
     kitt = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
     michael_knight = Character.new({name: "Michael Knight", actor: "David Hasselhoff", salary: 1_600_000})
     knight_rider = Show.new("Knight Rider", "Glen Larson", [michael_knight, kitt])
-
     assert_equal 2_600_000, knight_rider.total_salary
   end
 
@@ -36,7 +34,6 @@ class ShowTest < Minitest::Test
     kitt = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
     michael_knight = Character.new({name: "Michael Knight", actor: "David Hasselhoff", salary: 1_600_000})
     knight_rider = Show.new("Knight Rider", "Glen Larson", [michael_knight, kitt])
-
     assert_equal ["David Hasselhoff", "William Daniels"], knight_rider.actors
   end
 end
